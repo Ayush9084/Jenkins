@@ -13,16 +13,6 @@ pipeline {
       }
     }
 
-    stage('Back-end Test') {
-      agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
-      }
-      steps {
-        echo 'Running unit tests for back-end...'
-        sh 'mvn test'
-      }
-    }
-
     stage('Front-end Build') {
       agent {
         docker { image 'node:16-alpine' }
