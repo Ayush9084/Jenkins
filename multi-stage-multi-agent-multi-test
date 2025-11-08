@@ -9,7 +9,7 @@ pipeline {
       }
       steps {
         echo 'Building Java back-end...'
-        sh 'mvn clean package -DskipTests'
+        sh 'echo "Simulating Maven build..."'
       }
     }
 
